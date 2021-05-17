@@ -34,4 +34,14 @@ class WugeController extends Controller
         return array_merge($request->all());
     }
 
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function wugesearch()
+    {
+        return view('wugesearch');
+    }
+
 }
