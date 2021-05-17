@@ -20,7 +20,7 @@
 <![endif]-->
 <div id="app">
     <div data-v-5e3ac0d4="" class="app-formview mui-clearfix" style="">
-        <form action="{{ url('Wuge/submit') }}" method="post">
+        <form action="{{ url('wugesubmit') }}" method="post">
             <div data-v-5e3ac0d4="" class="app-formview__bg"></div>
             <div data-v-5e3ac0d4="">
                 <div data-v-5e3ac0d4="">
@@ -70,23 +70,23 @@
 
 
                                     </div>
-                                    <div data-id="5eb6c620c490d4af62000024" data-form-id="5ebe1937cf0f350f2597b4d7"
-                                         data-type="text" data-readonly="0" data-required="true" data-tier="3"
-                                         data-be-only="true" class="form-field field__required">
+                                    <div data-id="5eb6c765c490d4af62000028" data-form-id="5ebe1937cf0f350f2597b4d7"
+                                         data-type="text" data-readonly="0" data-required="true" data-isnumber="true"
+                                         data-tier="3" class="form-field field__required">
 
 
                                         <div data-v-133e279e="" class="field-body">
                                             <div data-v-133e279e="" class="field-label form-label custom-form-label">
                                                 <h3>
-                                                    <span>快递单号--收件人--产品型号--颜色--数量</span> <small
+                                                    <span>快递</span> <small
                                                         class="field-error-tiper mui-hidden"></small></h3></div>
                                             <div data-v-133e279e="" class="field-description custom-form-description">
-                                                示例：<br>SF111111--张三--iPhone11 64G--黑--1
+                                                什么快递 如：顺丰快递
                                             </div>
                                             <div data-v-133e279e="" class="field-form">
-                                                <label data-v-133e279e="" class="field-control fluid">
-                                                    <textarea data-v-133e279e="" placeholder="" rows="4" name="product"
-                                                              class="mui-input js-vd__input js-fd"></textarea>
+                                                <label data-v-133e279e="" class="field-control field-number">
+                                                    <input data-v-133e279e="" type="text" name="express_name" placeholder="请输入文字"
+                                                           class="mui-input js-vd__input js-fd">
                                                 </label>
                                             </div>
                                         </div>
@@ -99,30 +99,51 @@
                                         <div data-v-133e279e="" class="field-body">
                                             <div data-v-133e279e="" class="field-label form-label custom-form-label">
                                                 <h3>
-                                                    <span>价格</span> <small
+                                                    <span>快递单号</span> <small
                                                         class="field-error-tiper mui-hidden"></small></h3></div>
                                             <div data-v-133e279e="" class="field-description custom-form-description">
-                                                快递里几个商品
+                                                快递单号 如：SF111222333444
                                             </div>
-                                            <div data-v-133e279e="" class="field-form"><label data-v-133e279e=""
-                                                                                              class="field-control field-number"><input
-                                                        data-v-133e279e="" type="text" placeholder="请输入数字"
-                                                        class="mui-input js-vd__input js-fd"> </label>
+                                            <div data-v-133e279e="" class="field-form">
+                                                <label data-v-133e279e="" class="field-control field-number">
+                                                    <input data-v-133e279e="" type="text" name="express_num" placeholder="请输入文字"
+                                                           class="mui-input js-vd__input js-fd">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div data-id="5eb6c620c490d4af62000024" data-form-id="5ebe1937cf0f350f2597b4d7"
+                                         data-type="text" data-readonly="0" data-required="true" data-tier="3"
+                                         data-be-only="true" class="form-field field__required">
+
+
+                                        <div data-v-133e279e="" class="field-body">
+                                            <div data-v-133e279e="" class="field-label form-label custom-form-label">
+                                                <h3>
+                                                    <span>产品型号--颜色--数量--价格</span> <small
+                                                        class="field-error-tiper mui-hidden"></small></h3></div>
+                                            <div data-v-133e279e="" class="field-description custom-form-description">
+                                                示例：<br>iPhone11 64G--黑--1--5499
+                                            </div>
+                                            <div data-v-133e279e="" class="field-form">
+                                                <label data-v-133e279e="" class="field-control fluid">
+                                                    <textarea data-v-133e279e="" placeholder="" rows="4" name="product"
+                                                              class="mui-input js-vd__input js-fd"></textarea>
+                                                </label>
                                             </div>
                                         </div>
                                     </div>
                                     <div data-id="5eb6c70cc490d4af62000025" data-form-id="5ebe1937cf0f350f2597b4d7"
                                          data-type="name" data-readonly="0" data-required="true" data-isremember="true"
                                          data-tier="3" class="form-field field__required">
-
-
                                         <div class="field-body">
                                             <div class="field-label form-label custom-form-label"><h3><span>微信昵称</span>
                                                     <small class="field-error-tiper mui-hidden"></small></h3></div>
                                             <div class="field-description custom-form-description"
                                                  style="display: none;"></div>
                                             <div class="field-form"><label class="field-control field-name"><input
-                                                        type="text" class="mui-input js-vd__input js-fd"> </label>
+                                                        type="text" name="wx_name" class="mui-input js-vd__input js-fd"> </label>
                                             </div>
                                         </div>
                                     </div>
@@ -141,7 +162,7 @@
                                             </div>
                                             <div data-v-133e279e="" class="field-form"><label data-v-133e279e=""
                                                                                               class="field-control"><input
-                                                        data-v-133e279e="" type="text" placeholder=""
+                                                        data-v-133e279e="" type="text" name="alipay_num" placeholder=""
                                                         class="mui-input js-vd__input js-fd"> </label>
                                             </div>
                                         </div>
@@ -156,7 +177,7 @@
                                                     <small class="field-error-tiper mui-hidden"></small></h3></div>
                                             <div class="field-description custom-form-description">一定要写真实全名！不是昵称！</div>
                                             <div class="field-form"><label class="field-control field-name"><input
-                                                        type="text" class="mui-input js-vd__input js-fd"> </label>
+                                                        type="text" name="alipay_name" class="mui-input js-vd__input js-fd"> </label>
                                             </div>
                                         </div>
                                     </div>
@@ -164,8 +185,6 @@
                                          data-type="mobile" data-readonly="0" data-required="true"
                                          data-isremember="true"
                                          data-tier="3" class="form-field field__required">
-
-
                                         <div class="field-body">
                                             <div class="field-label form-label custom-form-label"><h3>
                                                     <span>手机号(特殊情况联系)</span> <small
@@ -173,14 +192,12 @@
                                             <div class="field-description custom-form-description"
                                                  style="display: none;"></div>
                                             <div class="field-form"><label class="field-control field-mobile"><input
-                                                        type="tel" maxlength="11" class="mui-input js-vd__input js-fd">
+                                                        type="text" name="mobile" maxlength="11" class="mui-input js-vd__input js-fd">
                                                 </label></div>
                                         </div>
                                     </div>
                                     <div data-id="5eb6c738c490d4af62000027" data-form-id="5ebe1937cf0f350f2597b4d7"
                                          data-type="text" data-readonly="0" data-tier="3" class="form-field">
-
-
                                         <div data-v-133e279e="" class="field-body">
                                             <div data-v-133e279e="" class="field-label form-label custom-form-label">
                                                 <h3>
@@ -190,12 +207,13 @@
                                                  style="display: none;"></div>
                                             <div data-v-133e279e="" class="field-form"><label data-v-133e279e=""
                                                                                               class="field-control"><input
-                                                        data-v-133e279e="" type="text" placeholder=""
+                                                        data-v-133e279e="" type="text" name="remark" placeholder=""
                                                         class="mui-input js-vd__input js-fd"> </label>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                {{ csrf_field() }}
                                 <div class="extend-fields">
                                     <div data-type="form-submit" class="form-field extend-field">
                                         <div class="form-submit-button">

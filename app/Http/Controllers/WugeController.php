@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Backend\ArticleController;
-use App\Http\Requests\Backend\Article\CreateRequest;
-use App\Models\Article;
+use App\Http\Requests\Wuge\CreateRequest;
+use App\Models\Wuge;
+use Illuminate\Http\Request;
 
 class WugeController extends Controller
 {
@@ -22,15 +22,16 @@ class WugeController extends Controller
      * @param CreateRequest $request
      * @return $this|\Illuminate\Http\RedirectResponse
      */
-    public function submit(CreateRequest $request)
+    public function store(CreateRequest $request)
     {
-        $article = Article::create(array_merge($this->basicFields($request), ['user_id' => Auth::id()]));
+        Wuge::create($this->basicFields($request));
+        return redirect()->back()->with('success', '操作成功');
+    }
 
-        if ($request->filled('tags')) {
-            $this->storeArticleTags($article, $request->tags);
-        }
 
-        return  redirect()->route('backend.article.index')->with('success', '文章添加成功');
+    private function basicFields(Request $request)
+    {
+        return array_merge($request->all());
     }
 
 }
