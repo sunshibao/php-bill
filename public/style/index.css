@@ -1,0 +1,70 @@
+/*TECH.MEITUAN.COM*/
+@-webkit-keyframes list-card-hover {
+    0% {
+        background: #fff
+    }
+    50% {
+        background: #eee
+    }
+    to {
+        background: #fff
+    }
+}
+
+@keyframes list-card-hover {
+    0% {
+        background: #fff
+    }
+    50% {
+        background: #eee
+    }
+    to {
+        background: #fff
+    }
+}
+
+.page-type-home .home-more-container {
+    margin: 1em 0
+}
+
+.page-type-home .home-browser-more-btn {
+    margin: 10px 0
+}
+
+.page-type-home .main-container .col-md-12:hover {
+    -webkit-animation: list-card-hover 20s infinite ease-in-out;
+    animation: list-card-hover 20s infinite ease-in-out
+}
+
+.page-type-home .post-container {
+    border-bottom: 1px dotted #eee
+}
+
+.page-type-home .post-container .meta-box {
+    padding: 0;
+    border: none;
+    margin: 16px 0 8px;
+    margin: 1rem 0 .5rem
+}
+
+.page-type-home .post-article-normal .post-container {
+    border-bottom: 1px dashed #eee
+}
+
+.page-type-home .post-article-last .post-container {
+    border-bottom: none
+}
+
+.page-type-home .m-recommend-page .thumbnail {
+    padding: 0;
+    border: none
+}
+
+.page-type-home .m-recommend-page .thumbnail img {
+    border-radius: 6px;
+    width: 100%
+}
+
+.page-type-home .m-recommend-page .thumbnail:hover img {
+    opacity: .85
+}

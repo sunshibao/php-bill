@@ -1,0 +1,66 @@
+/*TECH.MEITUAN.COM*/
+.page-type-salon #J_main-container .post-container h2, .page-type-salon #J_main-container .post-container h3, .page-type-salon #J_main-container .post-container h4.h5.h6 {
+    border-bottom: 1px dotted #eee;
+    margin-top: .8em
+}
+
+.page-type-salon #J_main-container .post-container .post-title {
+    border: none
+}
+
+.page-type-salon #J_main-container .post-container p {
+    margin: 0 0 16px;
+    margin: 0 0 1rem;
+    line-height: 1.75
+}
+
+.page-type-salon #J_main-container .post-container p a {
+    margin: 0 4px;
+    text-decoration: underline
+}
+
+.page-type-salon #J_main-container .post-container p em {
+    font-style: italic
+}
+
+.page-type-salon #J_main-container .post-container p strong em {
+    border-bottom: 2px dotted #bdbebd;
+    margin: 0 3px;
+    font-weight: 700;
+    font-style: normal
+}
+
+.page-type-salon #J_main-container .post-container p img {
+    max-width: 600px;
+    border: 2px solid #f7f7f7;
+    -webkit-box-shadow: 1px 2px 1px 1px #dadada;
+    box-shadow: 1px 2px 1px 1px #dadada;
+    display: block;
+    margin: 32px auto 24px;
+    margin: 2rem auto 1.5rem;
+    cursor: pointer
+}
+
+@media (min-width: 960px) {
+    .page-type-salon #J_main-container .post-container p img {
+        max-width: 600px
+    }
+}
+
+@media (min-width: 768px) and (max-width: 959px) {
+    .page-type-salon #J_main-container .post-container p img {
+        max-width: 80%
+    }
+}
+
+@media (max-width: 768px) {
+    .page-type-salon #J_main-container .post-container p img {
+        max-width: 90%;
+        border: 2px solid #f7f7f7;
+        -webkit-box-shadow: 1px 2px 1px 1px #dadada;
+        box-shadow: 1px 2px 1px 1px #dadada;
+        display: block;
+        margin: 2rem auto 1.5rem;
+        cursor: pointer
+    }
+}

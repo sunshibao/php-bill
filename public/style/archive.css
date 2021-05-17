@@ -1,0 +1,19 @@
+/*TECH.MEITUAN.COM*/
+.page-type-archive #archive-switch {
+    font-size: 14px
+}
+
+.page-type-archive #archive-switch a.active {
+    color: #000;
+    font-weight: 700
+}
+
+.page-type-archive .post-container {
+    border-bottom: 1px dotted #eee
+}
+
+.page-type-archive .post-container .meta-box {
+    padding: 0;
+    border: none;
+    margin: 1em
+}
