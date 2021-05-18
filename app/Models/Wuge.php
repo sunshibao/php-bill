@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Wuge extends Model
 {
-    protected $fillable = ['express_name', 'express_num', 'product', 'wx_name', 'alipay_num', 'alipay_name', 'mobile', 'remark'];
+    protected $fillable = ['express_name', 'express_num', 'product', 'wx_name', 'alipay_num', 'alipay_name', 'mobile', 'remark','is_remit'];
 
     protected $table = 'wuge';
 

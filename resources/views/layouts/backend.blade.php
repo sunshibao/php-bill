@@ -35,7 +35,7 @@
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini"><b>M</b>B</span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><b>Moell</b>&nbsp;Blog</span>
+            <span class="logo-lg"><b>五哥</b>&nbsp;报单系统</span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
@@ -114,7 +114,7 @@
         <div class="pull-right hidden-xs">
 
         </div>
-        <strong>Powered by <a href="http://moell.cn" target="_blank">Moell Blog</a></strong>
+        <strong>Powered by <a href="http://wuge.skill86.com" target="_blank">五哥报单系统</a></strong>
     </footer>
 </div>
 <!-- ./wrapper -->
