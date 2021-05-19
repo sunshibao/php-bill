@@ -20,7 +20,7 @@
 <![endif]-->
 <div id="app">
     <div data-v-5e3ac0d4="" class="app-formview mui-clearfix" style="">
-        <form action="{{ url('wugesubmit') }}" method="post">
+        <form role="form" action="{{ url('wugesubmit') }}" enctype="multipart/form-data"  method="post" id="user-form">
             <div data-v-5e3ac0d4="" class="app-formview__bg"></div>
             <div data-v-5e3ac0d4="">
                 <div data-v-5e3ac0d4="">
