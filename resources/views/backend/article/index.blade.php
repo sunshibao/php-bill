@@ -20,6 +20,8 @@
                             <select name="type" id="type" class="form-control">
                                 <option value="0" @if ($type ==0) selected="selected" @endif>美妆</option>
                                 <option value="1" @if ($type ==1) selected="selected" @endif>手机</option>
+                                <option value="2" @if ($type ==2) selected="selected" @endif>茅台</option>
+                                <option value="3" @if ($type ==3) selected="selected" @endif>其他</option>
                             </select>
                         </div>
                         <div class="form-group">

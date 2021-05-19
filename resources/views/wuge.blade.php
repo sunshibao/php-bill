@@ -33,13 +33,14 @@
                                         <div class="field-body">
                                             <div class="field-label form-label custom-form-title"><h1
                                                     style="text-align: center;">五哥报单系统</h1></div>
-                                            <div class="field-description custom-form-description max-width-limit"><p>
-                                                    <font
-                                                        color="#333333"><span
-                                                            style="font-family:宋体; font-size:inherit; font-style:inherit; font-variant-ligatures:inherit; font-variant-caps:inherit;"><b>查询链接：</b></span></font><a
-                                                        href="http://wuge.skill86.com/wugesearch" target="_blank"
-                                                        style="font-family:inherit; font-size:inherit; font-style:inherit; font-variant-ligatures:inherit; font-variant-caps:inherit; font-weight:inherit;">wuge.skill86.com/wugesearch</a>
-                                                </p>
+                                            <div class="field-description custom-form-description max-width-limit">
+{{--                                                <p>--}}
+{{--                                                    <font--}}
+{{--                                                        color="#333333"><span--}}
+{{--                                                            style="font-family:宋体; font-size:inherit; font-style:inherit; font-variant-ligatures:inherit; font-variant-caps:inherit;"><b>查询链接：</b></span></font><a--}}
+{{--                                                        href="http://wuge.skill86.com/wugesearch" target="_blank"--}}
+{{--                                                        style="font-family:inherit; font-size:inherit; font-style:inherit; font-variant-ligatures:inherit; font-variant-caps:inherit; font-weight:inherit;">wuge.skill86.com/wugesearch</a>--}}
+{{--                                                </p>--}}
                                                 <p>
                                                     <b style="font-style:inherit; font-variant-ligatures:inherit; font-variant-caps:inherit; font-size:16px; color:rgb(208, 2, 27); font-family:宋体;">转寄注意事项:</b>
 
@@ -58,11 +59,9 @@
                                                 </p>
                                                 <ol>
                                                     <li><font color="#333333"><span
-                                                                style="font-family:宋体;">货品</span>14<span
-                                                                style="font-family:宋体;">点前签收的当天出货，按出货</span>+1<span
-                                                                style="font-family:宋体;">天回；</span>14<span
-                                                                style="font-family:宋体;">点后签收的算到第</span><span
-                                                                style="font-family:宋体; font-size:inherit; font-style:inherit; font-variant-ligatures:inherit; font-variant-caps:inherit; font-weight:inherit;">二天。</span></font>
+                                                                style="font-family:宋体;">货品</span>18<span
+                                                                style="font-family:宋体;">点前签收的当天打款；</span>18<span
+                                                                style="font-family:宋体;">点后签收的第二天打款</span></font>
                                                     </li>
                                                 </ol>
                                             </div>
@@ -88,6 +87,8 @@
                                                     <select name="type" id="type" class="form-control">
                                                         <option value="0">美妆</option>
                                                         <option value="1">手机</option>
+                                                        <option value="2">茅台</option>
+                                                        <option value="3">其他</option>
                                                     </select>
                                                 </label>
                                             </div>
@@ -194,22 +195,22 @@
                                         </div>
                                     </div>
 
-                                    <div data-id="5eb6c70ec490d4af62000026" data-form-id="5ebe1937cf0f350f2597b4d7"
-                                         data-type="mobile" data-readonly="0" data-required="true"
-                                         data-isremember="true"
-                                         data-tier="3" class="form-field field__required">
-                                        <div class="field-body">
-                                            <div class="field-label form-label custom-form-label"><h3>
-                                                    <span>手机号(特殊情况联系)</span> <small
-                                                        class="field-error-tiper mui-hidden"></small></h3></div>
-                                            <div class="field-description custom-form-description"
-                                                 style="display: none;"></div>
-                                            <div class="field-form"><label class="field-control field-mobile"><input
-                                                        type="text" name="mobile" maxlength="11"
-                                                        class="mui-input js-vd__input js-fd">
-                                                </label></div>
-                                        </div>
-                                    </div>
+{{--                                    <div data-id="5eb6c70ec490d4af62000026" data-form-id="5ebe1937cf0f350f2597b4d7"--}}
+{{--                                         data-type="mobile" data-readonly="0" data-required="true"--}}
+{{--                                         data-isremember="true"--}}
+{{--                                         data-tier="3" class="form-field field__required">--}}
+{{--                                        <div class="field-body">--}}
+{{--                                            <div class="field-label form-label custom-form-label"><h3>--}}
+{{--                                                    <span>手机号(特殊情况联系)</span> <small--}}
+{{--                                                        class="field-error-tiper mui-hidden"></small></h3></div>--}}
+{{--                                            <div class="field-description custom-form-description"--}}
+{{--                                                 style="display: none;"></div>--}}
+{{--                                            <div class="field-form"><label class="field-control field-mobile"><input--}}
+{{--                                                        type="text" name="mobile" maxlength="11"--}}
+{{--                                                        class="mui-input js-vd__input js-fd">--}}
+{{--                                                </label></div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
 {{--                                    <div data-id="5eb6c738c490d4af62000027" data-form-id="5ebe1937cf0f350f2597b4d7"--}}
 {{--                                         data-type="text" data-readonly="0" data-tier="3" class="form-field">--}}
 {{--                                        <div data-v-133e279e="" class="field-body">--}}
