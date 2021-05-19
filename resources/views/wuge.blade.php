@@ -80,7 +80,7 @@
                                                     <span>报单分类</span> <small
                                                         class="field-error-tiper mui-hidden"></small></h3></div>
                                             <div data-v-133e279e="" class="field-description custom-form-description">
-                                                美妆还是手机
+                                                选择报单类型
                                             </div>
                                             <div data-v-133e279e="" class="field-form">
                                                 <label data-v-133e279e="" class="field-control field-number">
@@ -183,7 +183,7 @@
                                         <div data-v-133e279e="" class="field-body">
                                             <div data-v-133e279e="" class="field-label form-label custom-form-label">
                                                 <h3>
-                                                    <span>支富宝收款码</span> <small
+                                                    <span>收款码</span> <small
                                                         class="field-error-tiper mui-hidden"></small></h3></div>
                                             <div data-v-133e279e="" class="field-description custom-form-description">
                                                 一定要确认好自己的收款码，传错后果不负责。
