@@ -30,6 +30,11 @@
                             </select>
                         </div>
 
+                        <div class="form-group">
+                            <label for="title">快递单号</label>&nbsp;
+                            <input class="form-control" type="text" name="express_num" value="{{$express_num}}" placeholder="请输入快递单号" />
+                        </div>
+
                         <button type="submit" class="btn btn-info">搜索</button>
                     </form>
                 </div>

@@ -27,14 +27,14 @@ class WugeController extends Controller
                 $query->where('is_remit', "{$request->is_remit}");
             }
 
-            if ($request->filled('mobile')) {
-                $query->where('mobile', $request->mobile);
+            if ($request->filled('express_num')) {
+                $query->where('express_num','like', "%{$request->express_num}%");
             }
         })->paginate();
         $type = $request->type;
         $is_remit = $request->is_remit;
-        $mobile = $request->mobile;
-        return view('backend.article.index', compact('bills', 'type', 'is_remit', 'mobile'));
+        $express_num = $request->express_num;
+        return view('backend.article.index', compact('bills', 'type', 'is_remit', 'express_num'));
     }
 
     /**
