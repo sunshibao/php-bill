@@ -57,7 +57,7 @@
                                     <td>{{ $bill->product }}</td>
                                     <td>{{ $bill->mobile }}   </td>
                                     <td>{{ $bill->express_num }}</td>
-                                    <td><img src="{{$bill->alipay_qrcode}}" style="width:100px;height:100px;"></td>
+                                    <td><img src="{{$bill->alipay_qrcode}}" class="img-circle" alt="User Image" style="width:150px;height:170px;"></td>
                                     <td>{{ $bill->remark }}</td>
                                     <td>
                                         @if ($bill->is_remit == 0)
