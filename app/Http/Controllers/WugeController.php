@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Wuge\CreateRequest;
+use App\Models\User;
 use App\Models\Wuge;
 use Illuminate\Http\Request;
 use Storage;
@@ -25,8 +26,11 @@ class WugeController extends Controller
      */
     public function store(CreateRequest $request)
     {
-        $request->alipay_qrcode =  $this->uploadAlipayQrcode($request);
-        Wuge::create($this->basicFields($request));
+
+        $data = [
+            'alipay_qrcode' => $this->uploadAlipayQrcode($request),
+        ];
+        Wuge::create(array_merge($request->all(), $data));
         return redirect()->back()->with('success', '操作成功');
     }
 
@@ -58,6 +62,7 @@ class WugeController extends Controller
             && $request->file('alipay_qrcode')->isValid()
             && in_array($request->alipay_qrcode->extension(), ["png", "jpg", "jpeg", "gif"])
         ) {
+
             $path = $request->alipay_qrcode->store('avatars', config('blog.disk'));
             $url = Storage::disk(config('blog.disk'))->url($path);
         }
