@@ -8,26 +8,28 @@ Route::get('/wugesearch', 'WugeController@search')->name('wugesearch');
 
 Route::namespace('Backend')->prefix('backend')->group(function () {
 
-    Route::get('/login', 'AuthController@showLoginForm')->name('backend.login');
+    Route::resource('wuge', 'WugeController', ['as' => 'backend']);
 
-    Route::post('/login', 'AuthController@login');
+    Route::get('wugeremit', 'WugeController@wugeremit')->name('backend.wuge.wugeremit');
 
-    Route::get('/logout', 'AuthController@logout');
+    Route::get('wugeremark', 'WugeController@wugeremark')->name('backend.wuge.wugeremark');
+
+    Route::post('wugeupdate', 'WugeController@wugeupdate')->name('backend.wuge.wugeupdate');
 
 
-    Route::group(['middleware' => ['auth', 'reject-null-values']], function () {
-
-        Route::get('/', 'HomeController@index')->name('backend.home');
-
-        Route::resource('user', 'UserController', ['as' => 'backend']);
-
-        Route::resource('wuge', 'WugeController', ['as' => 'backend']);
-
-        Route::get('wugeremit', 'WugeController@wugeremit')->name('backend.wuge.wugeremit');
-
-        Route::get('wugeremark', 'WugeController@wugeremark')->name('backend.wuge.wugeremark');
-
-        Route::post('wugeupdate', 'WugeController@wugeupdate')->name('backend.wuge.wugeupdate');
-
-    });
+//    Route::group(['middleware' => ['auth', 'reject-null-values']], function () {
+//
+//        Route::get('/', 'HomeController@index')->name('backend.home');
+//
+//        Route::resource('user', 'UserController', ['as' => 'backend']);
+//
+//        Route::resource('wuge', 'WugeController', ['as' => 'backend']);
+//
+//        Route::get('wugeremit', 'WugeController@wugeremit')->name('backend.wuge.wugeremit');
+//
+//        Route::get('wugeremark', 'WugeController@wugeremark')->name('backend.wuge.wugeremark');
+//
+//        Route::post('wugeupdate', 'WugeController@wugeupdate')->name('backend.wuge.wugeupdate');
+//
+//    });
 });

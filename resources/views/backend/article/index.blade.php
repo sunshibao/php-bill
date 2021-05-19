@@ -1,11 +1,9 @@
 @extends('layouts.backend')
 
-@section('title', '报单管理')
+
 
 @section('header')
-    <h1>
-        报单管理
-    </h1>
+
 @endsection
 
 @section('content')
@@ -31,10 +29,7 @@
                                 <option value="1" @if ($is_remit ==1) selected="selected" @endif>已打款</option>
                             </select>
                         </div>
-                        <div class="form-group">
-                            <label for="cate_id">手机号</label>&nbsp;
-                            <input name='mobile' type="text" class="form-control" id="mobile" value="{{$mobile}}" placeholder="请输入手机号">&nbsp;
-                        </div>
+
                         <button type="submit" class="btn btn-info">搜索</button>
                     </form>
                 </div>
@@ -44,7 +39,6 @@
                         <tr>
                             <th>序号</th>
                             <th>产品名称</th>
-                            <th>手机号</th>
                             <th>快递编号</th>
                             <th>收款码</th>
                             <th>备注</th>
@@ -57,7 +51,6 @@
                                 <tr>
                                     <td>{{ $line }}</td>
                                     <td>{{ $bill->product }}</td>
-                                    <td>{{ $bill->mobile }}   </td>
                                     <td>{{ $bill->express_num }}</td>
                                     <td><img src="{{$bill->alipay_qrcode}}" class="img-circle" alt="User Image" style="width:150px;height:170px;"></td>
                                     <td>{{ $bill->remark }}</td>

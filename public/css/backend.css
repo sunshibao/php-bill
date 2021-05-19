@@ -12991,7 +12991,6 @@ body {
     transition: margin .3s ease-in-out, -webkit-transform .3s ease-in-out;
     transition: transform .3s ease-in-out, margin .3s ease-in-out;
     transition: transform .3s ease-in-out, margin .3s ease-in-out, -webkit-transform .3s ease-in-out;
-    margin-left: 230px;
     z-index: 820
 }
 
