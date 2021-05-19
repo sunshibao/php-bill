@@ -25,6 +25,7 @@ class WugeController extends Controller
      */
     public function store(CreateRequest $request)
     {
+        $request->alipay_qrcode =  $this->uploadAlipayQrcode($request);
         Wuge::create($this->basicFields($request));
         return redirect()->back()->with('success', '操作成功');
     }
@@ -46,5 +47,24 @@ class WugeController extends Controller
         return view('wugesearch', compact('articles', 'mobile'));
     }
 
+    /**
+     * @param Request $request
+     * @return string
+     */
+    private function uploadAlipayQrcode(Request $request)
+    {
+        $url = '';
+
+        if ($request->hasFile('alipay_qrcode')
+            && $request->file('alipay_qrcode')->isValid()
+            && in_array($request->alipay_qrcode->extension(), ["png", "jpg", "jpeg", "gif"])
+        ) {
+            $path = $request->alipay_qrcode->store('avatars', config('blog.disk'));
+
+            $url = Storage::disk(config('blog.disk'))->url($path);
+        }
+
+        return $url;
+    }
 
 }
