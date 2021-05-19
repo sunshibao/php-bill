@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'disk' => env('BLOG_DISK', 'public'),
+    'disk' => env('BLOG_DISK', 'qiniu'),
     'system_key' => [
         'blog_name',
         'motto',
