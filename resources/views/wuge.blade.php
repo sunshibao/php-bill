@@ -12,8 +12,8 @@
     <link rel="icon" sizes="any" mask="" href="">
     <title>五哥报单系统</title>
 
-    <link rel="stylesheet" href="{{ asset('Wuge/css/chunk-common.1cb400fcc3a8.css') }}">
-    <link rel="stylesheet" href="{{ asset('Wuge/css/44.29184bc47457.css') }}">
+    <link rel="stylesheet" href="{{ asset('wuge/css/chunk-common.1cb400fcc3a8.css') }}">
+    <link rel="stylesheet" href="{{ asset('wuge/css/44.29184bc47457.css') }}">
 
 </head>
 <body>
@@ -37,8 +37,8 @@
                                                     <font
                                                         color="#333333"><span
                                                             style="font-family:宋体; font-size:inherit; font-style:inherit; font-variant-ligatures:inherit; font-variant-caps:inherit;"><b>查询链接：</b></span></font><a
-                                                        href="https://fanqier.cn/f/gzjdv4yd/query" target="_blank"
-                                                        style="font-family:inherit; font-size:inherit; font-style:inherit; font-variant-ligatures:inherit; font-variant-caps:inherit; font-weight:inherit;">2222222222222</a>
+                                                        href="http://wuge.skill86.com/wugesearch" target="_blank"
+                                                        style="font-family:inherit; font-size:inherit; font-style:inherit; font-variant-ligatures:inherit; font-variant-caps:inherit; font-weight:inherit;">wuge.skill86.com/wugesearch</a>
                                                 </p>
                                                 <p>
                                                     <b style="font-style:inherit; font-variant-ligatures:inherit; font-variant-caps:inherit; font-size:16px; color:rgb(208, 2, 27); font-family:宋体;">转寄注意事项:</b>
@@ -78,6 +78,30 @@
                                         <div data-v-133e279e="" class="field-body">
                                             <div data-v-133e279e="" class="field-label form-label custom-form-label">
                                                 <h3>
+                                                    <span>报单分类</span> <small
+                                                        class="field-error-tiper mui-hidden"></small></h3></div>
+                                            <div data-v-133e279e="" class="field-description custom-form-description">
+                                                美妆还是手机
+                                            </div>
+                                            <div data-v-133e279e="" class="field-form">
+                                                <label data-v-133e279e="" class="field-control field-number">
+                                                    <select name="type" id="type" class="form-control">
+                                                        <option value="0">美妆</option>
+                                                        <option value="1">手机</option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div data-id="5eb6c765c490d4af62000028" data-form-id="5ebe1937cf0f350f2597b4d7"
+                                         data-type="text" data-readonly="0" data-required="true" data-isnumber="true"
+                                         data-tier="3" class="form-field field__required">
+
+
+                                        <div data-v-133e279e="" class="field-body">
+                                            <div data-v-133e279e="" class="field-label form-label custom-form-label">
+                                                <h3>
                                                     <span>快递</span> <small
                                                         class="field-error-tiper mui-hidden"></small></h3></div>
                                             <div data-v-133e279e="" class="field-description custom-form-description">
@@ -85,7 +109,8 @@
                                             </div>
                                             <div data-v-133e279e="" class="field-form">
                                                 <label data-v-133e279e="" class="field-control field-number">
-                                                    <input data-v-133e279e="" type="text" name="express_name" placeholder="请输入文字"
+                                                    <input data-v-133e279e="" type="text" name="express_name"
+                                                           placeholder="请输入文字"
                                                            class="mui-input js-vd__input js-fd">
                                                 </label>
                                             </div>
@@ -106,7 +131,8 @@
                                             </div>
                                             <div data-v-133e279e="" class="field-form">
                                                 <label data-v-133e279e="" class="field-control field-number">
-                                                    <input data-v-133e279e="" type="text" name="express_num" placeholder="请输入文字"
+                                                    <input data-v-133e279e="" type="text" name="express_num"
+                                                           placeholder="请输入文字"
                                                            class="mui-input js-vd__input js-fd">
                                                 </label>
                                             </div>
@@ -143,7 +169,8 @@
                                             <div class="field-description custom-form-description"
                                                  style="display: none;"></div>
                                             <div class="field-form"><label class="field-control field-name"><input
-                                                        type="text" name="wx_name" class="mui-input js-vd__input js-fd"> </label>
+                                                        type="text" name="wx_name" class="mui-input js-vd__input js-fd">
+                                                </label>
                                             </div>
                                         </div>
                                     </div>
@@ -155,32 +182,18 @@
                                         <div data-v-133e279e="" class="field-body">
                                             <div data-v-133e279e="" class="field-label form-label custom-form-label">
                                                 <h3>
-                                                    <span>支富宝账号</span> <small
+                                                    <span>支富宝收款码</span> <small
                                                         class="field-error-tiper mui-hidden"></small></h3></div>
                                             <div data-v-133e279e="" class="field-description custom-form-description">
-                                                推荐填绑定的邮箱账号
+                                                一定要确认好自己的收款码，传错后果不负责。
                                             </div>
                                             <div data-v-133e279e="" class="field-form"><label data-v-133e279e=""
-                                                                                              class="field-control"><input
-                                                        data-v-133e279e="" type="text" name="alipay_num" placeholder=""
-                                                        class="mui-input js-vd__input js-fd"> </label>
+                                                                                              class="field-control">
+                                                    <input type="file" name="alipay_qrcode" id="alipay_qrcode" accept="image/png,image/gif,image/jpeg"> </label>
                                             </div>
                                         </div>
                                     </div>
-                                    <div data-id="5ef081c2c490d4af6200003e" data-form-id="5ebe1937cf0f350f2597b4d7"
-                                         data-type="name" data-readonly="0" data-required="true" data-isremember="true"
-                                         data-tier="3" class="form-field field__required">
 
-
-                                        <div class="field-body">
-                                            <div class="field-label form-label custom-form-label"><h3><span>支富宝姓名</span>
-                                                    <small class="field-error-tiper mui-hidden"></small></h3></div>
-                                            <div class="field-description custom-form-description">一定要写真实全名！不是昵称！</div>
-                                            <div class="field-form"><label class="field-control field-name"><input
-                                                        type="text" name="alipay_name" class="mui-input js-vd__input js-fd"> </label>
-                                            </div>
-                                        </div>
-                                    </div>
                                     <div data-id="5eb6c70ec490d4af62000026" data-form-id="5ebe1937cf0f350f2597b4d7"
                                          data-type="mobile" data-readonly="0" data-required="true"
                                          data-isremember="true"
@@ -192,26 +205,27 @@
                                             <div class="field-description custom-form-description"
                                                  style="display: none;"></div>
                                             <div class="field-form"><label class="field-control field-mobile"><input
-                                                        type="text" name="mobile" maxlength="11" class="mui-input js-vd__input js-fd">
+                                                        type="text" name="mobile" maxlength="11"
+                                                        class="mui-input js-vd__input js-fd">
                                                 </label></div>
                                         </div>
                                     </div>
-                                    <div data-id="5eb6c738c490d4af62000027" data-form-id="5ebe1937cf0f350f2597b4d7"
-                                         data-type="text" data-readonly="0" data-tier="3" class="form-field">
-                                        <div data-v-133e279e="" class="field-body">
-                                            <div data-v-133e279e="" class="field-label form-label custom-form-label">
-                                                <h3>
-                                                    <span>备注</span> <small
-                                                        class="field-error-tiper mui-hidden"></small></h3></div>
-                                            <div data-v-133e279e="" class="field-description custom-form-description"
-                                                 style="display: none;"></div>
-                                            <div data-v-133e279e="" class="field-form"><label data-v-133e279e=""
-                                                                                              class="field-control"><input
-                                                        data-v-133e279e="" type="text" name="remark" placeholder=""
-                                                        class="mui-input js-vd__input js-fd"> </label>
-                                            </div>
-                                        </div>
-                                    </div>
+{{--                                    <div data-id="5eb6c738c490d4af62000027" data-form-id="5ebe1937cf0f350f2597b4d7"--}}
+{{--                                         data-type="text" data-readonly="0" data-tier="3" class="form-field">--}}
+{{--                                        <div data-v-133e279e="" class="field-body">--}}
+{{--                                            <div data-v-133e279e="" class="field-label form-label custom-form-label">--}}
+{{--                                                <h3>--}}
+{{--                                                    <span>备注</span> <small--}}
+{{--                                                        class="field-error-tiper mui-hidden"></small></h3></div>--}}
+{{--                                            <div data-v-133e279e="" class="field-description custom-form-description"--}}
+{{--                                                 style="display: none;"></div>--}}
+{{--                                            <div data-v-133e279e="" class="field-form"><label data-v-133e279e=""--}}
+{{--                                                                                              class="field-control"><input--}}
+{{--                                                        data-v-133e279e="" type="text" name="remark" placeholder=""--}}
+{{--                                                        class="mui-input js-vd__input js-fd"> </label>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
                                 </div>
                                 {{ csrf_field() }}
                                 <div class="extend-fields">

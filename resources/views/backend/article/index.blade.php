@@ -16,9 +16,18 @@
                 <div class="box-header">
                     <form class="form-inline" action="" method="get">
                         <div class="form-group">
+                            <label for="title">报单类型</label>&nbsp;
+                            <select name="type" id="type" class="form-control">
+                                <option value="0" @if ($type ==0) selected="selected" @endif>美妆</option>
+                                <option value="1" @if ($type ==1) selected="selected" @endif>手机</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
                             <label for="title">是否打款</label>&nbsp;
-                            <input name='is_remit' type="text" class="form-control" id="is_remit" value="{{$is_remit}}"
-                                   placeholder="未打款0，已打款1">&nbsp;
+                            <select name="is_remit" id="is_remit" class="form-control">
+                                <option value="0" @if ($is_remit ==0) selected="selected" @endif>未打款</option>
+                                <option value="1" @if ($is_remit ==1) selected="selected" @endif>已打款</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="cate_id">手机号</label>&nbsp;
@@ -34,10 +43,8 @@
                             <th>序号</th>
                             <th>产品名称</th>
                             <th>手机号</th>
-                            {{--                            <th>快递名称</th>--}}
                             <th>快递编号</th>
-                            <th>支付宝名称</th>
-                            <th>支付宝编号</th>
+                            <th>支付宝二维码</th>
                             <th>备注</th>
                             <th>是否打款</th>
                             <th>操作</th>
@@ -49,10 +56,8 @@
                                     <td>{{ $line }}</td>
                                     <td>{{ $bill->product }}</td>
                                     <td>{{ $bill->mobile }}   </td>
-                                    {{--                                    <td>{{ $bill->express_name }}</td>--}}
                                     <td>{{ $bill->express_num }}</td>
-                                    <td>{{$bill->alipay_name}}</td>
-                                    <td>{{$bill->alipay_num}}</td>
+                                    <td><img src="{{$bill->alipay_qrcode}}" style="width:100px;height:100px;"></td>
                                     <td>{{ $bill->remark }}</td>
                                     <td>
                                         @if ($bill->is_remit == 0)
@@ -65,6 +70,8 @@
                                     <td>
                                         <a href='{{ route("backend.wuge.wugeremit", ["id" => $bill->id]) }}' class='btn btn-info btn-xs'>
                                             <i class="fa fa-pencil"></i> 打款</a>
+                                        <a href='{{ route("backend.wuge.wugeremark", ["id" => $bill->id]) }}' class='btn btn-info btn-xs'>
+                                            <i class="fa fa-pencil"></i> 备注</a>
                                     </td>
                                 </tr>
                                 <?php $line++ ?>

@@ -22,7 +22,12 @@ Route::namespace('Backend')->prefix('backend')->group(function () {
         Route::resource('user', 'UserController', ['as' => 'backend']);
 
         Route::resource('wuge', 'WugeController', ['as' => 'backend']);
+
         Route::get('wugeremit', 'WugeController@wugeremit')->name('backend.wuge.wugeremit');
+
+        Route::get('wugeremark', 'WugeController@wugeremark')->name('backend.wuge.wugeremark');
+
+        Route::post('wugeupdate', 'WugeController@wugeupdate')->name('backend.wuge.wugeupdate');
 
     });
 });
