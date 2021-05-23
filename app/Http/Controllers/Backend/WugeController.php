@@ -30,6 +30,9 @@ class   WugeController extends Controller
             if ($request->filled('express_num')) {
                 $query->where('express_num','like', "%{$request->express_num}%");
             }
+            if ($request->filled('wx_name')) {
+                $query->where('wx_name', "{$request->wx_name}");
+            }
         })->paginate();
         $type = $request->type;
         $is_remit = $request->is_remit;

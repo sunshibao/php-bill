@@ -35,6 +35,11 @@
                             <input class="form-control" type="text" name="express_num" value="{{$express_num}}"
                                    placeholder="请输入快递单号"/>
                         </div>
+                        <div class="form-group">
+                            <label for="title">微信名称</label>&nbsp;
+                            <input class="form-control" type="text" name="wx_name" value="{{$express_num}}"
+                                   placeholder="请输入微信"/>
+                        </div>
 
                         <button type="submit" class="btn btn-info">搜索</button>
                     </form>
@@ -46,6 +51,7 @@
                             <th>序号</th>
                             <th>产品名称</th>
                             <th>快递编号</th>
+                            <th>微信名称</th>
                             <th>收款码</th>
                             <th>银行卡信息</th>
                             <th>备注</th>
@@ -59,6 +65,7 @@
                                     <td>{{ $line }}</td>
                                     <td>{{ $bill->product }}</td>
                                     <td>{{ $bill->express_num }}</td>
+                                    <td>{{ $bill->wx_name }}</td>
                                     <td><img src="{{ $bill->alipay_qrcode }}" class="img-circle" alt="alipay Image"
                                              style="width:150px;height:170px;"></td>
                                     <td>{{ $bill->bank_info }}</td>
