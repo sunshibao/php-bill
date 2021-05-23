@@ -28,7 +28,7 @@ class   WugeController extends Controller
             }
 
             if ($request->filled('express_num')) {
-                $query->where('express_num','like', "%{$request->express_num}%");
+                $query->where('express_num', 'like', "%{$request->express_num}%");
             }
             if ($request->filled('wx_name')) {
                 $query->where('wx_name', "{$request->wx_name}");
@@ -85,5 +85,15 @@ class   WugeController extends Controller
     public function show($id)
     {
         //
+    }
+
+    /**
+     * @param Request $request
+     * @return $this|\Illuminate\Http\RedirectResponse
+     */
+    public function wugedelete(Request $request)
+    {
+        Wuge::where('id', $request->id)->delete();
+        return redirect()->route('backend.wuge.index')->with('success', '删除成功');
     }
 }

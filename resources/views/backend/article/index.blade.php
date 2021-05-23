@@ -85,6 +85,9 @@
                                         <a href='{{ route("backend.wuge.wugeremark", ["id" => $bill->id]) }}'
                                            class='btn btn-info btn-xs'>
                                             <i class="fa fa-pencil"></i> 备注</a>
+                                        <a href='{{ route("backend.wuge.wugedelete", ["id" => $bill->id]) }}'
+                                           class='btn btn-info btn-xs'>
+                                            <i class="fa fa-pencil"></i> 删除</a>
                                     </td>
                                 </tr>
                                 <?php $line++ ?>

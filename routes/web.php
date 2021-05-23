@@ -15,6 +15,7 @@ Route::namespace('Backend')->prefix('backend')->group(function () {
     Route::get('wugeremark', 'WugeController@wugeremark')->name('backend.wuge.wugeremark');
 
     Route::post('wugeupdate', 'WugeController@wugeupdate')->name('backend.wuge.wugeupdate');
+    Route::get('wugedelete', 'WugeController@wugedelete')->name('backend.wuge.wugedelete');
 
 
 //    Route::group(['middleware' => ['auth', 'reject-null-values']], function () {
