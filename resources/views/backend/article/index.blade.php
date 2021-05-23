@@ -46,6 +46,7 @@
                             <th>产品名称</th>
                             <th>快递编号</th>
                             <th>收款码</th>
+                            <th>银行卡信息</th>
                             <th>备注</th>
                             <th>是否打款</th>
                             <th>操作</th>
@@ -58,6 +59,7 @@
                                     <td>{{ $bill->product }}</td>
                                     <td>{{ $bill->express_num }}</td>
                                     <td><img src="{{$bill->alipay_qrcode}}" class="img-circle" alt="User Image" style="width:150px;height:170px;"></td>
+                                    <td>{{ $bill->bank_info }}</td>
                                     <td>{{ $bill->remark }}</td>
                                     <td>
                                         @if ($bill->is_remit == 0)
