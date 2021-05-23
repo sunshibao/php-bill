@@ -3,12 +3,7 @@
 Route::get('/', 'WugeController@index');
 Route::get('/wugesubmit', 'WugeController@index');
 Route::post('/wugesubmit', 'WugeController@store');
-<<<<<<< HEAD
-Route::get('/wugesearch', 'WugeController@wugesearch');
-Route::post('/wugesearch', 'WugeController@wugesearchpost');
-=======
 Route::get('/wugesearch', 'WugeController@search')->name('wugesearch');
->>>>>>> ddfbf1a20059b0f3d137e872140d7ffd70c0d031
 
 
 Route::namespace('Backend')->prefix('backend')->group(function () {

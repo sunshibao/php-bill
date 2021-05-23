@@ -41,15 +41,6 @@ class WugeController extends Controller
     }
 
     /**
-<<<<<<< HEAD
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function wugesearch()
-    {
-        return view('wugesearch');
-=======
      * @param CreateRequest $request
      * @return $this|\Illuminate\Http\RedirectResponse
      */
@@ -76,7 +67,6 @@ class WugeController extends Controller
             $url = Storage::disk(config('blog.disk'))->url($path);
         }
         return $url;
->>>>>>> ddfbf1a20059b0f3d137e872140d7ffd70c0d031
     }
 
 }
