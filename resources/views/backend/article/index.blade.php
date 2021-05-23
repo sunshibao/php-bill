@@ -1,11 +1,9 @@
 @extends('layouts.backend')
 
-@section('title', '文章管理')
+
 
 @section('header')
-    <h1>
-        文章管理
-    </h1>
+
 @endsection
 
 @section('content')
@@ -16,19 +14,28 @@
                 <div class="box-header">
                     <form class="form-inline" action="" method="get">
                         <div class="form-group">
-                            <label for="title">标题</label>&nbsp;
-                            <input name='title' type="text" class="form-control" id="title" placeholder="请输入文章标题">&nbsp;
+                            <label for="title">报单类型</label>&nbsp;
+                            <select name="type" id="type" class="form-control">
+                                <option value="0" @if ($type ==0) selected="selected" @endif>美妆</option>
+                                <option value="1" @if ($type ==1) selected="selected" @endif>手机</option>
+                                <option value="2" @if ($type ==2) selected="selected" @endif>茅台</option>
+                                <option value="3" @if ($type ==3) selected="selected" @endif>其他</option>
+                            </select>
                         </div>
                         <div class="form-group">
-                            <label for="cate_id">分类</label>&nbsp;
-                            @inject('categoryPresenter', 'App\Presenters\CategoryPresenter')
-                            {!! $categoryPresenter->getSelect(0, '请选择', '') !!}
+                            <label for="title">是否打款</label>&nbsp;
+                            <select name="is_remit" id="is_remit" class="form-control">
+                                <option value="0" @if ($is_remit ==0) selected="selected" @endif>未打款</option>
+                                <option value="1" @if ($is_remit ==1) selected="selected" @endif>已打款</option>
+                            </select>
                         </div>
+
+                        <div class="form-group">
+                            <label for="title">快递单号</label>&nbsp;
+                            <input class="form-control" type="text" name="express_num" value="{{$express_num}}" placeholder="请输入快递单号" />
+                        </div>
+
                         <button type="submit" class="btn btn-info">搜索</button>
-                        <div class="pull-right">
-                            <a href='{{ route("backend.article.create") }}' class='btn btn-success btn-xs'>
-                                <i class="fa fa-plus"></i>发布文章</a>
-                        </div>
                     </form>
                 </div>
                 <!-- /.box-header -->
@@ -36,40 +43,35 @@
                     <table class="table table-hover">
                         <tr>
                             <th>序号</th>
-                            <th>作者</th>
-                            <th>标题</th>
-                            <th>阅读数</th>
-                            <th>评论数</th>
-                            <th>分类</th>
-                            <th>时间</th>
+                            <th>产品名称</th>
+                            <th>快递编号</th>
+                            <th>收款码</th>
+                            <th>备注</th>
+                            <th>是否打款</th>
                             <th>操作</th>
                         </tr>
-                        @if ($articles)
-                            @inject('articlePresenter', 'App\Presenters\ArticlePresenter')
-
+                        @if ($bills)
                             <?php $line = 1 ?>
-                            @foreach($articles as $article)
+                            @foreach($bills as $bill)
                                 <tr>
                                     <td>{{ $line }}</td>
+                                    <td>{{ $bill->product }}</td>
+                                    <td>{{ $bill->express_num }}</td>
+                                    <td><img src="{{$bill->alipay_qrcode}}" class="img-circle" alt="User Image" style="width:150px;height:170px;"></td>
+                                    <td>{{ $bill->remark }}</td>
                                     <td>
-                                        @if($article->user)
-                                            {{ $article->user->name }}
+                                        @if ($bill->is_remit == 0)
+                                            未打款
+                                        @else
+                                            已打款
                                         @endif
+
                                     </td>
-                                    <td><a href='{{ route("newblog/article", ["id" => $article->id]) }}' target="_blank">{{ $articlePresenter->formatTitle($article->title) }}</a></td>
-                                    <td>{{ $article->read_count }}</td>
-                                    <td>{{ $article->comment_count }}</td>
                                     <td>
-                                        @if($article->category)
-                                            {{ $article->category->name }}
-                                        @endif
-                                    </td>
-                                    <td>{{ $article->created_at }}</td>
-                                    <td>
-                                        <a href='{{ route("backend.article.edit", ["id" => $article->id]) }}' class='btn btn-info btn-xs'>
-                                            <i class="fa fa-pencil"></i> 修改</a>
-                                        <a data-href='{{ route("backend.article.destroy", ["id" => $article->id]) }}'
-                                           class='btn btn-danger btn-xs article-delete'><i class="fa fa-trash-o"></i> 删除</a>
+                                        <a href='{{ route("backend.wuge.wugeremit", ["id" => $bill->id]) }}' class='btn btn-info btn-xs'>
+                                            <i class="fa fa-pencil"></i> 打款</a>
+                                        <a href='{{ route("backend.wuge.wugeremark", ["id" => $bill->id]) }}' class='btn btn-info btn-xs'>
+                                            <i class="fa fa-pencil"></i> 备注</a>
                                     </td>
                                 </tr>
                                 <?php $line++ ?>
@@ -78,10 +80,6 @@
                     </table>
                 </div>
                 <!-- /.box-body -->
-
-                <div class="box-footer clearfix">
-                    {!! $articles->links() !!}
-                </div>
             </div>
             <!-- /.box -->
         </div>
@@ -90,8 +88,8 @@
 
 @section('javascript')
     <script>
-        $(function() {
-            $(".article-delete").click(function(){
+        $(function () {
+            $(".article-delete").click(function () {
                 var url = $(this).attr('data-href');
                 Moell.ajax.delete(url);
             });
