@@ -130,12 +130,12 @@
                                             <div data-v-133e279e="" class="field-description custom-form-description">
                                                 快递单号 如：SF111222333444
                                             </div>
-                                            <div data-v-133e279e="" class="field-form">
-                                                <label data-v-133e279e="" class="field-control field-number">
-                                                    <input data-v-133e279e="" type="text" name="express_num"
-                                                           placeholder="请输入文字"
-                                                           class="mui-input js-vd__input js-fd">
-                                                </label>
+						<div data-v-133e279e="" class="field-form">
+                                                	<label data-v-133e279e="" class="field-control fluid">
+                                                    		<textarea data-v-133e279e="" placeholder="" rows="5" name="express_num"
+                                                              class="mui-input js-vd__input js-fd"></textarea>
+                                                	</label>
+                                            	</div>
                                             </div>
                                         </div>
                                     </div>
@@ -155,7 +155,7 @@
                                             </div>
                                             <div data-v-133e279e="" class="field-form">
                                                 <label data-v-133e279e="" class="field-control fluid">
-                                                    <textarea data-v-133e279e="" placeholder="" rows="4" name="product"
+                                                    <textarea data-v-133e279e="" placeholder="" rows="5" name="product"
                                                               class="mui-input js-vd__input js-fd"></textarea>
                                                 </label>
                                             </div>
