@@ -20,7 +20,7 @@
 <![endif]-->
 <div id="app">
     <div data-v-5e3ac0d4="" class="app-formview mui-clearfix" style="">
-        <form role="form" action="{{ url('wugesubmit') }}" enctype="multipart/form-data"  method="post" id="user-form">
+        <form role="form" action="{{ url('wugesubmit') }}" enctype="multipart/form-data" method="post" id="user-form">
             <div data-v-5e3ac0d4="" class="app-formview__bg"></div>
             <div data-v-5e3ac0d4="">
                 <div data-v-5e3ac0d4="">
@@ -34,13 +34,13 @@
                                             <div class="field-label form-label custom-form-title"><h1
                                                     style="text-align: center;">五哥报单系统</h1></div>
                                             <div class="field-description custom-form-description max-width-limit">
-{{--                                                <p>--}}
-{{--                                                    <font--}}
-{{--                                                        color="#333333"><span--}}
-{{--                                                            style="font-family:宋体; font-size:inherit; font-style:inherit; font-variant-ligatures:inherit; font-variant-caps:inherit;"><b>查询链接：</b></span></font><a--}}
-{{--                                                        href="http://wuge.skill86.com/wugesearch" target="_blank"--}}
-{{--                                                        style="font-family:inherit; font-size:inherit; font-style:inherit; font-variant-ligatures:inherit; font-variant-caps:inherit; font-weight:inherit;">wuge.skill86.com/wugesearch</a>--}}
-{{--                                                </p>--}}
+                                                {{--                                                <p>--}}
+                                                {{--                                                    <font--}}
+                                                {{--                                                        color="#333333"><span--}}
+                                                {{--                                                            style="font-family:宋体; font-size:inherit; font-style:inherit; font-variant-ligatures:inherit; font-variant-caps:inherit;"><b>查询链接：</b></span></font><a--}}
+                                                {{--                                                        href="http://wuge.skill86.com/wugesearch" target="_blank"--}}
+                                                {{--                                                        style="font-family:inherit; font-size:inherit; font-style:inherit; font-variant-ligatures:inherit; font-variant-caps:inherit; font-weight:inherit;">wuge.skill86.com/wugesearch</a>--}}
+                                                {{--                                                </p>--}}
                                                 <p>
                                                     <b style="font-style:inherit; font-variant-ligatures:inherit; font-variant-caps:inherit; font-size:16px; color:rgb(208, 2, 27); font-family:宋体;">转寄注意事项:</b>
 
@@ -130,137 +130,127 @@
                                             <div data-v-133e279e="" class="field-description custom-form-description">
                                                 快递单号 如：SF111222333444
                                             </div>
-						<div data-v-133e279e="" class="field-form">
-                                                	<label data-v-133e279e="" class="field-control fluid">
-                                                    		<textarea data-v-133e279e="" placeholder="" rows="5" name="express_num"
-                                                              class="mui-input js-vd__input js-fd"></textarea>
-                                                	</label>
-                                            	</div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div data-id="5eb6c620c490d4af62000024" data-form-id="5ebe1937cf0f350f2597b4d7"
-                                         data-type="text" data-readonly="0" data-required="true" data-tier="3"
-                                         data-be-only="true" class="form-field field__required">
-
-
-                                        <div data-v-133e279e="" class="field-body">
-                                            <div data-v-133e279e="" class="field-label form-label custom-form-label">
-                                                <h3>
-                                                    <span>产品型号--颜色--数量--价格</span> <small
-                                                        class="field-error-tiper mui-hidden"></small></h3></div>
-                                            <div data-v-133e279e="" class="field-description custom-form-description">
-                                                示例：<br>iPhone11 64G--黑--1--5499
-                                            </div>
                                             <div data-v-133e279e="" class="field-form">
                                                 <label data-v-133e279e="" class="field-control fluid">
+                                                    		<textarea data-v-133e279e="" placeholder="" rows="5"
+                                                                      name="express_num"
+                                                                      class="mui-input js-vd__input js-fd"></textarea>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div data-id="5eb6c620c490d4af62000024" data-form-id="5ebe1937cf0f350f2597b4d7"
+                                     data-type="text" data-readonly="0" data-required="true" data-tier="3"
+                                     data-be-only="true" class="form-field field__required">
+
+
+                                    <div data-v-133e279e="" class="field-body">
+                                        <div data-v-133e279e="" class="field-label form-label custom-form-label">
+                                            <h3>
+                                                <span>产品型号--颜色--数量--价格</span> <small
+                                                    class="field-error-tiper mui-hidden"></small></h3></div>
+                                        <div data-v-133e279e="" class="field-description custom-form-description">
+                                            示例：<br>iPhone11 64G--黑--1--5499
+                                        </div>
+                                        <div data-v-133e279e="" class="field-form">
+                                            <label data-v-133e279e="" class="field-control fluid">
                                                     <textarea data-v-133e279e="" placeholder="" rows="5" name="product"
                                                               class="mui-input js-vd__input js-fd"></textarea>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div data-id="5eb6c70cc490d4af62000025" data-form-id="5ebe1937cf0f350f2597b4d7"
-                                         data-type="name" data-readonly="0" data-required="true" data-isremember="true"
-                                         data-tier="3" class="form-field field__required">
-                                        <div class="field-body">
-                                            <div class="field-label form-label custom-form-label"><h3><span>微信昵称</span>
-                                                    <small class="field-error-tiper mui-hidden"></small></h3></div>
-                                            <div class="field-description custom-form-description"
-                                                 style="display: none;"></div>
-                                            <div class="field-form"><label class="field-control field-name"><input
-                                                        type="text" name="wx_name" class="mui-input js-vd__input js-fd">
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div data-id="5ef0820bc490d4af6200003f" data-form-id="5ebe1937cf0f350f2597b4d7"
-                                         data-type="text" data-readonly="0" data-required="true" data-isremember="true"
-                                         data-tier="3" class="form-field field__required">
-
-
-                                        <div data-v-133e279e="" class="field-body">
-                                            <div data-v-133e279e="" class="field-label form-label custom-form-label">
-                                                <h3>
-                                                    <span>收款码</span> <small
-                                                        class="field-error-tiper mui-hidden"></small></h3></div>
-                                            <div data-v-133e279e="" class="field-description custom-form-description">
-                                                一定要确认好自己的收款码，传错后果不负责。
-                                            </div>
-                                            <div data-v-133e279e="" class="field-form"><label data-v-133e279e=""
-                                                                                              class="field-control">
-                                                    <input type="file" name="alipay_qrcode" id="alipay_qrcode" accept="image/png,image/gif,image/jpeg"> </label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-{{--                                    <div data-id="5eb6c70ec490d4af62000026" data-form-id="5ebe1937cf0f350f2597b4d7"--}}
-{{--                                         data-type="mobile" data-readonly="0" data-required="true"--}}
-{{--                                         data-isremember="true"--}}
-{{--                                         data-tier="3" class="form-field field__required">--}}
-{{--                                        <div class="field-body">--}}
-{{--                                            <div class="field-label form-label custom-form-label"><h3>--}}
-{{--                                                    <span>手机号(特殊情况联系)</span> <small--}}
-{{--                                                        class="field-error-tiper mui-hidden"></small></h3></div>--}}
-{{--                                            <div class="field-description custom-form-description"--}}
-{{--                                                 style="display: none;"></div>--}}
-{{--                                            <div class="field-form"><label class="field-control field-mobile"><input--}}
-{{--                                                        type="text" name="mobile" maxlength="11"--}}
-{{--                                                        class="mui-input js-vd__input js-fd">--}}
-{{--                                                </label></div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                    <div data-id="5eb6c738c490d4af62000027" data-form-id="5ebe1937cf0f350f2597b4d7"--}}
-{{--                                         data-type="text" data-readonly="0" data-tier="3" class="form-field">--}}
-{{--                                        <div data-v-133e279e="" class="field-body">--}}
-{{--                                            <div data-v-133e279e="" class="field-label form-label custom-form-label">--}}
-{{--                                                <h3>--}}
-{{--                                                    <span>备注</span> <small--}}
-{{--                                                        class="field-error-tiper mui-hidden"></small></h3></div>--}}
-{{--                                            <div data-v-133e279e="" class="field-description custom-form-description"--}}
-{{--                                                 style="display: none;"></div>--}}
-{{--                                            <div data-v-133e279e="" class="field-form"><label data-v-133e279e=""--}}
-{{--                                                                                              class="field-control"><input--}}
-{{--                                                        data-v-133e279e="" type="text" name="remark" placeholder=""--}}
-{{--                                                        class="mui-input js-vd__input js-fd"> </label>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-                                </div>
-                                {{ csrf_field() }}
-                                <div class="extend-fields">
-                                    <div data-type="form-submit" class="form-field extend-field">
-                                        <div class="form-submit-button">
-                                            <button type="submit"
-                                                    class="form-button__submit custom-form-submit-button js-form-submit">
-                                                提交
-                                            </button>
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
-                            </section>
+                                <div data-id="5eb6c70cc490d4af62000025" data-form-id="5ebe1937cf0f350f2597b4d7"
+                                     data-type="name" data-readonly="0" data-required="true" data-isremember="true"
+                                     data-tier="3" class="form-field field__required">
+                                    <div class="field-body">
+                                        <div class="field-label form-label custom-form-label"><h3><span>微信昵称</span>
+                                                <small class="field-error-tiper mui-hidden"></small></h3></div>
+                                        <div class="field-description custom-form-description"
+                                             style="display: none;"></div>
+                                        <div class="field-form"><label class="field-control field-name"><input
+                                                    type="text" name="wx_name" class="mui-input js-vd__input js-fd">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-id="5ef0820bc490d4af6200003f" data-form-id="5ebe1937cf0f350f2597b4d7"
+                                     data-type="text" data-readonly="0" data-required="true" data-isremember="true"
+                                     data-tier="3" class="form-field field__required">
+
+
+                                    <div data-v-133e279e="" class="field-body">
+                                        <div data-v-133e279e="" class="field-label form-label custom-form-label">
+                                            <h3>
+                                                <span>收款码</span> <small
+                                                    class="field-error-tiper mui-hidden"></small></h3></div>
+                                        <div data-v-133e279e="" class="field-description custom-form-description">
+                                            一定要确认好自己的收款码，传错后果不负责。
+                                        </div>
+                                        <div data-v-133e279e="" class="field-form"><label data-v-133e279e=""
+                                                                                          class="field-control">
+                                                <input type="file" name="alipay_qrcode" id="alipay_qrcode"
+                                                       accept="image/png,image/gif,image/jpeg"> </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-id="5eb6c620c490d4af62000024" data-form-id="5ebe1937cf0f350f2597b4d7"
+                                     data-type="text" data-readonly="0" data-required="true" data-tier="3"
+                                     data-be-only="true" class="form-field field__required">
+
+
+                                    <div data-v-133e279e="" class="field-body">
+                                        <div data-v-133e279e="" class="field-label form-label custom-form-label">
+                                            <h3>
+                                                <span>银行卡信息--银行--卡号--真实姓名</span> <small
+                                                    class="field-error-tiper mui-hidden"></small></h3></div>
+                                        <div data-v-133e279e="" class="field-description custom-form-description">
+                                            示例：<br>建设银行--766777888877666777888--张三
+                                        </div>
+                                        <div data-v-133e279e="" class="field-form">
+                                            <label data-v-133e279e="" class="field-control fluid">
+                                                    <textarea data-v-133e279e="" placeholder="" rows="5" name="bank_info"
+                                                              class="mui-input js-vd__input js-fd"></textarea>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
                         </div>
-                    </article>
-                    <div data-v-5e3ac0d4="" class="form-powered"></div>
+                        {{ csrf_field() }}
+                        <div class="extend-fields">
+                            <div data-type="form-submit" class="form-field extend-field">
+                                <div class="form-submit-button">
+                                    <button type="submit"
+                                            class="form-button__submit custom-form-submit-button js-form-submit">
+                                        提交
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        </section>
                 </div>
+                </article>
+                <div data-v-5e3ac0d4="" class="form-powered"></div>
             </div>
-
-            <div data-v-cda6051e="" data-v-5e3ac0d4="" class="el-dialog__wrapper dialog-submit-flow"
-                 style="display: none;">
-                <div role="dialog" aria-modal="true" aria-label="dialog" class="el-dialog"
-                     style="margin-top: 15vh; width: 400px;">
-                    <div class="el-dialog__header"><span class="el-dialog__title"></span></div>
-                </div>
-            </div>
-            <div data-v-5e3ac0d4="" class="el-dialog__wrapper limit-time-tip" style="display: none;">
-                <div role="dialog" aria-modal="true" aria-label="dialog" class="el-dialog"
-                     style="margin-top: 15vh; width: 400px;">
-                    <div class="el-dialog__header"><span class="el-dialog__title"></span></div>
-                </div>
-            </div>
-        </form>
     </div>
+
+    <div data-v-cda6051e="" data-v-5e3ac0d4="" class="el-dialog__wrapper dialog-submit-flow"
+         style="display: none;">
+        <div role="dialog" aria-modal="true" aria-label="dialog" class="el-dialog"
+             style="margin-top: 15vh; width: 400px;">
+            <div class="el-dialog__header"><span class="el-dialog__title"></span></div>
+        </div>
+    </div>
+    <div data-v-5e3ac0d4="" class="el-dialog__wrapper limit-time-tip" style="display: none;">
+        <div role="dialog" aria-modal="true" aria-label="dialog" class="el-dialog"
+             style="margin-top: 15vh; width: 400px;">
+            <div class="el-dialog__header"><span class="el-dialog__title"></span></div>
+        </div>
+    </div>
+    </form>
+</div>
 </div>
 
 </body>
