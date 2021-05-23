@@ -32,7 +32,8 @@
 
                         <div class="form-group">
                             <label for="title">快递单号</label>&nbsp;
-                            <input class="form-control" type="text" name="express_num" value="{{$express_num}}" placeholder="请输入快递单号" />
+                            <input class="form-control" type="text" name="express_num" value="{{$express_num}}"
+                                   placeholder="请输入快递单号"/>
                         </div>
 
                         <button type="submit" class="btn btn-info">搜索</button>
@@ -58,7 +59,8 @@
                                     <td>{{ $line }}</td>
                                     <td>{{ $bill->product }}</td>
                                     <td>{{ $bill->express_num }}</td>
-                                    <td><img src="{{$bill->alipay_qrcode}}" class="img-circle" alt="User Image" style="width:150px;height:170px;"></td>
+                                    <td><img src="{{ $bill->alipay_qrcode }}" class="img-circle" alt="alipay Image"
+                                             style="width:150px;height:170px;"></td>
                                     <td>{{ $bill->bank_info }}</td>
                                     <td>{{ $bill->remark }}</td>
                                     <td>
@@ -70,9 +72,11 @@
 
                                     </td>
                                     <td>
-                                        <a href='{{ route("backend.wuge.wugeremit", ["id" => $bill->id]) }}' class='btn btn-info btn-xs'>
+                                        <a href='{{ route("backend.wuge.wugeremit", ["id" => $bill->id]) }}'
+                                           class='btn btn-info btn-xs'>
                                             <i class="fa fa-pencil"></i> 打款</a>
-                                        <a href='{{ route("backend.wuge.wugeremark", ["id" => $bill->id]) }}' class='btn btn-info btn-xs'>
+                                        <a href='{{ route("backend.wuge.wugeremark", ["id" => $bill->id]) }}'
+                                           class='btn btn-info btn-xs'>
                                             <i class="fa fa-pencil"></i> 备注</a>
                                     </td>
                                 </tr>

@@ -10,7 +10,7 @@ use App\Models\ArticleTag;
 use App\Models\Wuge;
 use Illuminate\Http\Request;
 
-class WugeController extends Controller
+class   WugeController extends Controller
 {
     /**
      * @param Request $request
